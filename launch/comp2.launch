@@ -8,8 +8,14 @@
 
 	<node name="map_pub2" pkg="icp_localization" type="map_pub2" output="screen"/>
 
-	<!-- node name="icp2" pkg="icp_localization" type="icp2" output="screen"/ -->
+	<node name="icp2_n" pkg="icp_localization" type="icp2_n" output="screen"/>
 	
+    <node name="write_csv2" pkg="icp_localization" type="write_csv2.py" output="screen"/>
+
+
+	<arg name="path" default="/home/lct/nctu_sdc/localization_ws/" />
+	<arg name="file" default="sdc_localization_2_lite" />
+	<node pkg="rosbag" type="play" name="player" output="screen" args="-d 15 -r 0.03 --clock $(arg path)$(arg file).bag "/>
 
 </launch>
 

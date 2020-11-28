@@ -6,7 +6,13 @@
 
     <node name="map_pub" pkg="icp_localization" type="map_pub" output="screen"/>
 
+    <node name="icp" pkg="icp_localization" type="icp" output="screen"/>
+
+    <node name="write_csv" pkg="icp_localization" type="write_csv.py" output="screen"/>
 
 
+	<arg name="path" default="/home/lct/nctu_sdc/localization_ws/" />
+	<arg name="file" default="sdc_localization_1" />
+	<node pkg="rosbag" type="play" name="player" output="screen" args="-d 15 -r 0.03 --clock $(arg path)$(arg file).bag "/>
 </launch>
 

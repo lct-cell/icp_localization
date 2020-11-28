@@ -8,8 +8,11 @@
 
 	<node name="map_pub3" pkg="icp_localization" type="map_pub3" output="screen"/>
 
-	<!-- node name="icp2" pkg="icp_localization" type="icp2" output="screen"/ -->
+	<node name="icp3" pkg="icp_localization" type="icp3" output="screen"/>
 	
+	<arg name="path" default="/home/lct/nctu_sdc/localization_ws/" />
+	<arg name="file" default="sdc_localization_3_lite" />
+	<node pkg="rosbag" type="play" name="player" output="screen" args="-d 15 -r 0.03 --clock $(arg path)$(arg file).bag "/>
 
 </launch>
 
