@@ -150,18 +150,18 @@ int main (int argc, char** argv)
 	// get map pointcloud from pcd file and filter the pointcloud
 	pcl::PCDReader reader;
 	// Replace the path below with the path where you saved your file
-	reader.read("/home/lct/nctu_sdc/localization_ws/src/icp_localization/map/nuscenes_maps/map_1600_900.pcd", *cloud);
+	reader.read("/home/lct/nctu_sdc/localization_ws/src/localization_309512009/map/nuscenes_maps/map_1600_900.pcd", *cloud);
 
-	reader.read("/home/lct/nctu_sdc/localization_ws/src/icp_localization/map/nuscenes_maps/map_1700_900.pcd", *cloud_n);
+	reader.read("/home/lct/nctu_sdc/localization_ws/src/localization_309512009/map/nuscenes_maps/map_1700_900.pcd", *cloud_n);
 	pcl::concatenatePointCloud(*cloud, *cloud_n, *cloud);
-	reader.read("/home/lct/nctu_sdc/localization_ws/src/icp_localization/map/nuscenes_maps/map_1600_1000.pcd", *cloud_n);
+	reader.read("/home/lct/nctu_sdc/localization_ws/src/localization_309512009/map/nuscenes_maps/map_1600_1000.pcd", *cloud_n);
 	pcl::concatenatePointCloud(*cloud, *cloud_n, *cloud);
-	reader.read("/home/lct/nctu_sdc/localization_ws/src/icp_localization/map/nuscenes_maps/map_1700_1000.pcd", *cloud_n);
+	reader.read("/home/lct/nctu_sdc/localization_ws/src/localization_309512009/map/nuscenes_maps/map_1700_1000.pcd", *cloud_n);
 	pcl::concatenatePointCloud(*cloud, *cloud_n, *cloud);
 	
-	reader.read("/home/lct/nctu_sdc/localization_ws/src/icp_localization/map/nuscenes_maps/map_1600_800.pcd", *cloud_n);
+	reader.read("/home/lct/nctu_sdc/localization_ws/src/localization_309512009/map/nuscenes_maps/map_1600_800.pcd", *cloud_n);
 	pcl::concatenatePointCloud(*cloud, *cloud_n, *cloud);
-	reader.read("/home/lct/nctu_sdc/localization_ws/src/icp_localization/map/nuscenes_maps/map_1700_800.pcd", *cloud_n);
+	reader.read("/home/lct/nctu_sdc/localization_ws/src/localization_309512009/map/nuscenes_maps/map_1700_800.pcd", *cloud_n);
 	pcl::concatenatePointCloud(*cloud, *cloud_n, *cloud);
 
 

@@ -1,14 +1,14 @@
 <launch>
 
-	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find icp_localization)/config/rviz.rviz" />
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find localization_309512009)/config/rviz.rviz" />
 
     <node name="tf_world" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 map world 10"/>
 
-    <node name="map_pub" pkg="icp_localization" type="map_pub" output="screen"/>
+    <node name="map_pub" pkg="localization_309512009" type="map_pub" output="screen"/>
 
-    <node name="icp" pkg="icp_localization" type="icp" output="screen"/>
+    <node name="icp" pkg="localization_309512009" type="icp" output="screen"/>
 
-    <node name="write_csv" pkg="icp_localization" type="write_csv.py" output="screen"/>
+    <node name="write_csv" pkg="localization_309512009" type="write_csv.py" output="screen"/>
 
 
 	<arg name="path" default="/home/lct/nctu_sdc/localization_ws/" />

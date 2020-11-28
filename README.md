@@ -15,10 +15,10 @@ change line 13 in launch/comp3.launch to the path of your rosbag
 
 3. after catkin_make and source devel/setup.bash launch the file  
 competition I:  
-roslaunch icp_localization comp1.launch  
+roslaunch localization_309512009 comp1.launch  
                 -------------------  
 competition II:  
-roslaunch icp_localization comp2.launch  
+roslaunch localization_309512009 comp2.launch  
                 -------------------  
 competition III:  
-roslaunch icp_localization comp3.launch  
+roslaunch localization_309512009 comp3.launch  

@@ -175,7 +175,7 @@ int main (int argc, char** argv)
 	// get map pointcloud from pcd file and filter the pointcloud
 	pcl::PCDReader reader;
 	// Replace the path below with the path where you saved your file
-	reader.read("/home/lct/nctu_sdc/localization_ws/src/icp_localization/map/itri_map.pcd", *cloud);
+	reader.read("/home/lct/nctu_sdc/localization_ws/src/localization_309512009/map/itri_map.pcd", *cloud);
 
 	std::cerr << "Map pointCloud before filtering: " << cloud->width * cloud->height
 		<< " data points " << std::endl;

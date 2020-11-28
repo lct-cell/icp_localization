@@ -23,18 +23,18 @@ int main(int argc, char **argv)
     // Fill in the cloud data
     pcl::PCDReader reader;
     // Replace the path below with the path where you saved your file
-    //reader.read("/home/lct/nctu_sdc/localization_ws/src/icp_localization/map/nuscenes_map.pcd", *cloud);
-	reader.read("/home/lct/nctu_sdc/localization_ws/src/icp_localization/map/nuscenes_maps/map_1700_800.pcd", *cloud);
+    //reader.read("/home/lct/nctu_sdc/localization_ws/src/localization_309512009/map/nuscenes_map.pcd", *cloud);
+	reader.read("/home/lct/nctu_sdc/localization_ws/src/localization_309512009/map/nuscenes_maps/map_1700_800.pcd", *cloud);
 
-	reader.read("/home/lct/nctu_sdc/localization_ws/src/icp_localization/map/nuscenes_maps/map_1800_800.pcd", *cloud_n);
+	reader.read("/home/lct/nctu_sdc/localization_ws/src/localization_309512009/map/nuscenes_maps/map_1800_800.pcd", *cloud_n);
 	pcl::concatenatePointCloud(*cloud, *cloud_n, *cloud);
-	reader.read("/home/lct/nctu_sdc/localization_ws/src/icp_localization/map/nuscenes_maps/map_1900_800.pcd", *cloud_n);
+	reader.read("/home/lct/nctu_sdc/localization_ws/src/localization_309512009/map/nuscenes_maps/map_1900_800.pcd", *cloud_n);
 	pcl::concatenatePointCloud(*cloud, *cloud_n, *cloud);
-	reader.read("/home/lct/nctu_sdc/localization_ws/src/icp_localization/map/nuscenes_maps/map_1700_900.pcd", *cloud_n);
+	reader.read("/home/lct/nctu_sdc/localization_ws/src/localization_309512009/map/nuscenes_maps/map_1700_900.pcd", *cloud_n);
 	pcl::concatenatePointCloud(*cloud, *cloud_n, *cloud);
-	reader.read("/home/lct/nctu_sdc/localization_ws/src/icp_localization/map/nuscenes_maps/map_1800_900.pcd", *cloud_n);
+	reader.read("/home/lct/nctu_sdc/localization_ws/src/localization_309512009/map/nuscenes_maps/map_1800_900.pcd", *cloud_n);
 	pcl::concatenatePointCloud(*cloud, *cloud_n, *cloud);
-	reader.read("/home/lct/nctu_sdc/localization_ws/src/icp_localization/map/nuscenes_maps/map_1900_900.pcd", *cloud_n);
+	reader.read("/home/lct/nctu_sdc/localization_ws/src/localization_309512009/map/nuscenes_maps/map_1900_900.pcd", *cloud_n);
 	pcl::concatenatePointCloud(*cloud, *cloud_n, *cloud);
 
     std::cerr << "PointCloud before filtering: " << cloud->width * cloud->height
