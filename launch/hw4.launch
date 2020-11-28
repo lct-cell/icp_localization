@@ -1,0 +1,13 @@
+<launch>
+
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find icp_localization)/config/rviz.rviz" />
+
+    <node name="tf_world" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 map world 10"/>
+
+    <!--node name="pcd_read" pkg="pcd_read" type="pcd_read" output="screen"/ -->
+    <node name="map_pub" pkg="icp_localization" type="map_pub" output="screen"/>
+
+
+
+</launch>
+
