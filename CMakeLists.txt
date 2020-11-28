@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(icp_localization)
+project(localization_309512009)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
@@ -173,7 +173,7 @@ add_executable (icp2 src/icp2.cpp)
 add_executable (icp3 src/icp3.cpp)
 add_executable (icp3_n src/icp3_n.cpp)
 add_executable (icp2_n src/icp2_n.cpp)
-add_executable (write_csv src/write_csv.cpp)
+#add_executable (write_csv src/write_csv.cpp)
 target_link_libraries (map_pub ${PCL_LIBRARIES} ${catkin_LIBRARIES})
 target_link_libraries (map_pub2 ${PCL_LIBRARIES} ${catkin_LIBRARIES})
 target_link_libraries (map_pub3 ${PCL_LIBRARIES} ${catkin_LIBRARIES})
@@ -182,7 +182,7 @@ target_link_libraries (icp2 ${PCL_LIBRARIES} ${catkin_LIBRARIES})
 target_link_libraries (icp3 ${PCL_LIBRARIES} ${catkin_LIBRARIES})
 target_link_libraries (icp3_n ${PCL_LIBRARIES} ${catkin_LIBRARIES})
 target_link_libraries (icp2_n ${PCL_LIBRARIES} ${catkin_LIBRARIES})
-target_link_libraries (write_csv ${PCL_LIBRARIES} ${catkin_LIBRARIES})
+#target_link_libraries (write_csv ${PCL_LIBRARIES} ${catkin_LIBRARIES})
 
 
 #############
